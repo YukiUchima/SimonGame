@@ -85,8 +85,6 @@ body {
   .btn {
     border: 3px solid black;
     margin: 12px;
-    width: 150px;
-    height: 150px;
   }
   .footer {
     font-size: 20px;
@@ -104,8 +102,6 @@ body {
   .btn {
     border: 2px solid black;
     margin: 1px;
-    width: 150px;
-    height: 150px;
   }
   .footer {
     font-size: 20px;
