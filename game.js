@@ -116,3 +116,13 @@ $(document).on("keydown",function(){
         }, 1000);
     };
 });
+
+$(document).on("touchstart",function(){
+    if (newGame){
+    $("h1").text("Starting Game...");
+    setTimeout(() => {
+        newGame = false;
+        nextSequence();    
+        }, 1000);
+    };
+});
