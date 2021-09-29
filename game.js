@@ -74,6 +74,18 @@ $(".btn").click(function(event){
         }
     }
 });
+// Game waits and listens for USER to touch(mobile) on color button
+$(".btn").on("click touchstart", function(event){
+    if (newGame !== true){
+    var color = event.target.id;
+    userClickedPattern.push(color);
+    animatePress(color);
+    playSound(color);
+    if(count<=level){
+        checkAnswer(color);
+    }
+}
+});
 
 // Simon loops through all buttons from start to end for player to see
 const simonLoops = async () => {
