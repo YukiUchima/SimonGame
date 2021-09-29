@@ -74,8 +74,9 @@ $(".btn").click(function(event){
         }
     }
 });
+
 // Game waits and listens for USER to touch(mobile) on color button
-$(".btn").on("click touchstart", function(event){
+$(".btn").on("tap", function(event){
     if (newGame !== true){
     var color = event.target.id;
     userClickedPattern.push(color);
@@ -129,7 +130,7 @@ $(document).on("keydown",function(){
     };
 });
 
-$(document).on("touchstart",function(){
+$(document).on("tap",function(){
     if (newGame){
     $("h1").text("Starting Game...");
     setTimeout(() => {
