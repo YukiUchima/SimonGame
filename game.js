@@ -41,7 +41,7 @@ function highlight(color){
 };
 
 //* *******************
-function checkAnswer(currentColor){
+function checkAnswer(){
         if (userClickedPattern.at(count) === gamePattern.at(count)) {
             console.log("Level: " + level +" Correct");
             console.log("gamePattern: " + gamePattern);
@@ -64,13 +64,15 @@ function checkAnswer(currentColor){
 
 // Game waits and listens for USER to click on color button
 $(".btn").click(function(event){
-        if (newGame !== true){
+        if (!newGame){
         var color = event.target.id;
         userClickedPattern.push(color);
         animatePress(color);
         playSound(color);
         if(count<=level){
-            checkAnswer(color);
+            setTimeout(() => {
+                checkAnswer();
+            }, 100);
         }
     }
 });
